@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kashka Octo | Official</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+    <main class="main-container">
+
+        <div class="profile-header">
+            <div class="avatar-container">
+                <img src="https://ui-avatars.com/api/?name=Kashka+Octo&background=0a0a0a&color=a855f7&size=256&bold=true" alt="Profile" class="profile-img">
+            </div>
+            <h1 class="name">Kashka Octo</h1>
+            <div class="role">Software Engineer</div>
+            <p class="bio">Crafting high-performance digital experiences.</p>
+        </div>
+
+        <div class="links-wrapper">
+            
+            <div class="link-group" id="group-0">
+                <div class="link-card" onclick="toggleDropdown('group-0')">
+                    <div class="link-icon-box">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <div class="link-content">
+                        <span class="link-title">Portfolio</span>
+                        <span class="link-subtitle">Selected works & case studies</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+                </div>
+                
+                <div class="sublinks-container" id="sub-0">
+                    <a href="#" class="sub-link" target="_blank">
+                        <i class="fa-solid fa-code"></i>
+                        <span>Web Applications</span>
+                    </a>
+                    <a href="#" class="sub-link" target="_blank">
+                        <i class="fa-solid fa-pen-nib"></i>
+                        <span>UI/UX Design</span>
+                    </a>
+                    <a href="#" class="sub-link" target="_blank">
+                        <i class="fa-solid fa-server"></i>
+                        <span>System Architecture</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="link-group" id="group-1">
+                <a href="https://github.com" class="link-card" target="_blank">
+                    <div class="link-icon-box">
+                        <i class="fa-brands fa-github"></i>
+                    </div>
+                    <div class="link-content">
+                        <span class="link-title">GitHub</span>
+                        <span class="link-subtitle">Open source contributions</span>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square dropdown-arrow" style="transform: none; opacity: 0.5;"></i>
+                </a>
+            </div>
+
+            <div class="link-group" id="group-2">
+                <a href="https://linkedin.com" class="link-card" target="_blank">
+                    <div class="link-icon-box">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+                    <div class="link-content">
+                        <span class="link-title">LinkedIn</span>
+                        <span class="link-subtitle">Professional network</span>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square dropdown-arrow" style="transform: none; opacity: 0.5;"></i>
+                </a>
+            </div>
+
+            <div class="link-group" id="group-3">
+                <div class="link-card" onclick="toggleDropdown('group-3')">
+                    <div class="link-icon-box">
+                        <i class="fa-solid fa-share-nodes"></i>
+                    </div>
+                    <div class="link-content">
+                        <span class="link-title">Social Media</span>
+                        <span class="link-subtitle">Connect with me daily</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+                </div>
+                
+                <div class="sublinks-container" id="sub-3">
+                    <a href="https://instagram.com/username" class="sub-link" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="https://tiktok.com/@username" class="sub-link" target="_blank">
+                        <i class="fa-brands fa-tiktok"></i>
+                        <span>TikTok</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <footer class="footer">
+            &copy; Designed by Kashka Octo <b>|</b> 2026 <br>
+        </footer>
+
+    </main>
+
+    <script>
+        function toggleDropdown(id) {
+            const group = document.getElementById(id);
+            const content = group.querySelector('.sublinks-container');
+            
+            group.classList.toggle('active');
+
+            if (group.classList.contains('active')) {
+                content.style.maxHeight = content.scrollHeight + "px";
+            } else {
+                content.style.maxHeight = "0px";
+            }
+        }
+    </script>
+</body>
+</html>

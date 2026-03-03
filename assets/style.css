@@ -1,0 +1,157 @@
+:root {
+    --bg-dark: #050505;
+    --bg-gradient: radial-gradient(circle at top center, #1e1b4b 0%, #000000 80%);
+    --card-bg: rgba(20, 20, 20, 0.6);
+    --card-border: rgba(168, 85, 247, 0.15);
+    --primary: #a855f7;
+    --primary-glow: rgba(168, 85, 247, 0.3);
+    --text-main: #ffffff;
+    --text-muted: #a1a1aa;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background: var(--bg-gradient);
+    background-color: var(--bg-dark);
+    background-attachment: fixed;
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 1.5rem;
+    -webkit-font-smoothing: antialiased;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 500px;
+    animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* PROFILE */
+.profile-header { text-align: center; margin-bottom: 3rem; }
+.avatar-container { position: relative; display: inline-block; margin-bottom: 1.5rem; }
+.profile-img {
+    width: 120px; height: 120px; border-radius: 50%;
+    border: 2px solid var(--primary); padding: 4px;
+    background: rgba(0,0,0,0.5); object-fit: cover;
+    box-shadow: 0 0 30px var(--primary-glow); transition: transform 0.4s ease;
+}
+.profile-img:hover { transform: scale(1.05); box-shadow: 0 0 50px rgba(168, 85, 247, 0.5); }
+.name {
+    font-size: 1.75rem; font-weight: 700; margin-bottom: 0.5rem;
+    background: linear-gradient(to right, #fff, #d8b4fe);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.role { font-size: 0.85rem; color: var(--primary); font-weight: 600; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 0.75rem; }
+.bio { font-size: 0.95rem; color: var(--text-muted); font-weight: 300; line-height: 1.6; }
+
+/* LINKS */
+.links-wrapper { display: flex; flex-direction: column; gap: 1.2rem; }
+.link-card {
+    background: var(--card-bg); border: 1px solid var(--card-border);
+    backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+    padding: 1.2rem 1.5rem; border-radius: 16px;
+    text-decoration: none; display: flex; align-items: center;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative; overflow: hidden; cursor: pointer;
+}
+.link-card:hover {
+    transform: translateY(-3px); border-color: var(--primary);
+    background: rgba(168, 85, 247, 0.08);
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.8), 0 0 20px -5px var(--primary-glow);
+}
+.link-icon-box {
+    width: 45px; height: 45px; display: flex; align-items: center; justify-content: center;
+    background: rgba(255, 255, 255, 0.05); border-radius: 12px; margin-right: 1.2rem;
+    font-size: 1.2rem; color: var(--text-main); transition: all 0.3s ease;
+}
+.link-card:hover .link-icon-box { background: var(--primary); color: #fff; }
+.link-content { flex: 1; display: flex; flex-direction: column; }
+.link-title { color: var(--text-main); font-weight: 600; font-size: 1.05rem; }
+.link-subtitle { color: var(--text-muted); font-size: 0.8rem; margin-top: 4px; font-weight: 300; }
+.dropdown-arrow { font-size: 0.8rem; color: var(--text-muted); transition: transform 0.4s ease; }
+
+.link-group.active .dropdown-arrow { transform: rotate(180deg); color: var(--primary); }
+.link-group.active .link-card { border-color: var(--primary); background: rgba(168, 85, 247, 0.1); }
+
+.sublinks-container {
+    max-height: 0; overflow: hidden; transition: max-height 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    margin: 0 1rem; border-left: 1px solid var(--card-border);
+}
+.link-group.active .sublinks-container { margin-top: 0.5rem; margin-bottom: 0.5rem; }
+.sub-link {
+    display: flex; align-items: center; padding: 0.8rem 1rem;
+    text-decoration: none; color: var(--text-muted); transition: all 0.2s; border-radius: 8px; font-size: 0.9rem;
+}
+.sub-link:hover { color: #fff; background: rgba(255, 255, 255, 0.05); padding-left: 1.5rem; }
+.sub-link i { margin-right: 0.8rem; font-size: 0.8rem; width: 20px; text-align: center; }
+
+.footer { margin-top: 4rem; text-align: center; font-size: 0.75rem; color: #52525b; letter-spacing: 1px; text-transform: uppercase; }
+.sub-link:hover .fa-whatsapp { color: #25D366; }
+.sub-link:hover .fa-instagram { color: #E1306C; }
+.sub-link:hover .fa-tiktok { color: #00f2ea; text-shadow: 2px 0 #ff0050; }
+
+/* --- SUBLINKS (Dropdown Items) --- */
+.sublinks-container {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    margin: 0 1rem;
+    /* Kita hilangkan border kiri container agar fokus ke itemnya */
+    border-left: 1px solid rgba(255, 255, 255, 0.05); 
+}
+
+.link-group.active .sublinks-container {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.sub-link {
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 1rem;
+    text-decoration: none;
+    color: var(--text-muted);
+    transition: all 0.3s ease; /* Transisi diperhalus */
+    border-radius: 0 8px 8px 0; /* Sudut kanan tumpul, kiri tajam untuk border */
+    font-size: 0.9rem;
+    
+    /* Setup awal untuk border kiri */
+    border-left: 3px solid transparent; 
+    position: relative;
+}
+
+/* --- EFEK HOVER BARU --- */
+.sub-link:hover {
+    color: #fff;
+    /* Efek 1: Geser ke kanan */
+    padding-left: 1.5rem; 
+    
+    /* Efek 2: Garis Ungu di Kiri */
+    border-left: 3px solid var(--primary);
+    
+    /* Efek 3: Background Gradient Mewah (Ungu pudar ke transparan) */
+    background: linear-gradient(90deg, rgba(168, 85, 247, 0.15) 0%, transparent 100%);
+}
+
+/* Efek Khusus untuk Ikon di dalam Sub-link saat di-hover */
+.sub-link:hover i {
+    color: var(--primary); /* Ikon jadi ungu */
+    transform: scale(1.2); /* Ikon membesar sedikit */
+    text-shadow: 0 0 10px rgba(168, 85, 247, 0.6); /* Ikon bersinar (glowing) */
+}
+
+/* Styling Ikon Default */
+.sub-link i { 
+    margin-right: 1rem; /* Jarak ikon ke teks diperlebar sedikit */
+    font-size: 0.8rem; 
+    width: 20px; 
+    text-align: center;
+    transition: all 0.3s ease; /* Supaya perubahan warna & ukuran halus */
+}
+
+@keyframes slideUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
