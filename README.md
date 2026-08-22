@@ -1,2 +1,2 @@
 # Linktree-Kashka
-This is a simple static web inspired by linktree which can facilitate interaction.
+A minimalist static web page inspired by Linktree, developed as a student portfolio project to centralize personal links, showcase projects, and streamline social interactions.
