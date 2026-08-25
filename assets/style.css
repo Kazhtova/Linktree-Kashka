@@ -133,7 +133,6 @@ body {
     background: linear-gradient(90deg, rgba(168, 85, 247, 0.15) 0%, transparent 100%);
 }
 
-/* Efek Khusus untuk Ikon di dalam Sub-link saat di-hover */
 .sub-link:hover i {
     color: var(--primary); 
     transform: scale(1.2); 
@@ -142,11 +141,10 @@ body {
 
 /*  */
 .sub-link i { 
-    margin-right: 1rem; /* Jarak ikon ke teks diperlebar sedikit */
+    margin-right: 1rem; 
     font-size: 0.8rem; 
     width: 20px; 
     text-align: center;
-    transition: all 0.3s ease; /* Supaya perubahan warna & ukuran halus */
+    transition: all 0.3s ease; 
 }
-
 @keyframes slideUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
