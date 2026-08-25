@@ -119,8 +119,6 @@ body {
     transition: all 0.3s ease; 
     border-radius: 0 8px 8px 0; 
     font-size: 0.9rem;
-    
-    /* Setup awal untuk border kiri */
     border-left: 3px solid transparent; 
     position: relative;
 }
@@ -128,13 +126,10 @@ body {
 
 .sub-link:hover {
     color: #fff;
-    /* Efek 1: Geser ke kanan */
     padding-left: 1.5rem; 
     
-    /* Efek 2: Garis Ungu di Kiri */
     border-left: 3px solid var(--primary);
     
-    /* Efek 3: Background Gradient Mewah (Ungu pudar ke transparan) */
     background: linear-gradient(90deg, rgba(168, 85, 247, 0.15) 0%, transparent 100%);
 }
 
