@@ -140,9 +140,9 @@ body {
 
 /* Efek Khusus untuk Ikon di dalam Sub-link saat di-hover */
 .sub-link:hover i {
-    color: var(--primary); /* Ikon jadi ungu */
-    transform: scale(1.2); /* Ikon membesar sedikit */
-    text-shadow: 0 0 10px rgba(168, 85, 247, 0.6); /* Ikon bersinar (glowing) */
+    color: var(--primary); 
+    transform: scale(1.2); 
+    text-shadow: 0 0 10px rgba(168, 85, 247, 0.6); 
 }
 
 /*  */
