@@ -95,13 +95,11 @@ body {
 .sub-link:hover .fa-instagram { color: #E1306C; }
 .sub-link:hover .fa-tiktok { color: #00f2ea; text-shadow: 2px 0 #ff0050; }
 
-/* --- SUBLINKS (Dropdown Items) --- */
 .sublinks-container {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s cubic-bezier(0.19, 1, 0.22, 1);
     margin: 0 1rem;
-    /* Kita hilangkan border kiri container agar fokus ke itemnya */
     border-left: 1px solid rgba(255, 255, 255, 0.05); 
 }
 
