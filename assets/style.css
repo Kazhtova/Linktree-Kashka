@@ -116,8 +116,8 @@ body {
     padding: 0.8rem 1rem;
     text-decoration: none;
     color: var(--text-muted);
-    transition: all 0.3s ease; /* Transisi diperhalus */
-    border-radius: 0 8px 8px 0; /* Sudut kanan tumpul, kiri tajam untuk border */
+    transition: all 0.3s ease; 
+    border-radius: 0 8px 8px 0; 
     font-size: 0.9rem;
     
     /* Setup awal untuk border kiri */
@@ -125,7 +125,7 @@ body {
     position: relative;
 }
 
-/* --- EFEK HOVER BARU --- */
+
 .sub-link:hover {
     color: #fff;
     /* Efek 1: Geser ke kanan */
