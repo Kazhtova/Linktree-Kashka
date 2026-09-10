@@ -13,7 +13,7 @@ A minimalist static web page inspired by Linktree, developed as a student portfo
 
 ---
 
-## 🛠️ Built With
+## Built With
 
 - **HTML5:** Semantic document structure.
 - **CSS3:** Modern styling with Flexbox/Grid and custom properties (variables).
