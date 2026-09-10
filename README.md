@@ -4,7 +4,7 @@ A minimalist static web page inspired by Linktree, developed as a student portfo
 
 ---
 
-## 📌 Features
+## Features
 
 - **Centralized Hub:** Connects social media channels, personal portfolio, and contact info in one clean interface.
 - **Responsive Layout:** Optimized for mobile-first viewing, tablet, and desktop displays.
