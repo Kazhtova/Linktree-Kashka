@@ -21,7 +21,7 @@ A minimalist static web page inspired by Linktree, developed as a student portfo
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 To run this project locally, follow these simple steps:
 
