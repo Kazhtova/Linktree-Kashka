@@ -19,7 +19,6 @@ A minimalist static web page inspired by Linktree, developed as a student portfo
 - **CSS3:** Modern styling with Flexbox/Grid and custom properties (variables).
 - *(Optional: Tailwind CSS / Vanilla JS - sesuaikan jika kamu menggunakannya)*
 
----
 
 ## Getting Started
 
