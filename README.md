@@ -29,4 +29,3 @@ Ensure you have a modern web browser installed (e.g., Google Chrome, Brave, Fire
 1. **Clone the repository:**
    ```bash
    git clone [https://github.com/username/Linktree-Kashka.git](https://github.com/username/Linktree-Kashka.git)
-```
