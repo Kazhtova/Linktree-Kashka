@@ -20,10 +20,6 @@ A minimalist static web page inspired by Linktree, developed as a student portfo
 - *(Optional: Tailwind CSS / Vanilla JS - sesuaikan jika kamu menggunakannya)*
 
 
-## Getting Started
-
-To run this project locally, follow these simple steps:
-
 ### Prerequisites
 
 Ensure you have a modern web browser installed (e.g., Google Chrome, Brave, Firefox).
