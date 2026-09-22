@@ -10,7 +10,7 @@ A minimalist static web page inspired by Linktree, developed as a student portfo
 - **Minimalist & Fast:** Zero heavy dependencies for lightning-fast loading speeds.
 - **Accessible (a11y):** Clear semantic structure and accessible touch targets.
 
-
+---
 
 ## Built With
 
