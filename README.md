@@ -2,6 +2,7 @@
 
 A minimalist static web page inspired by Linktree, developed as a student portfolio project to centralize personal links, showcase projects, and streamline social interactions.
 
+---
 
 ## Features
 
@@ -10,6 +11,7 @@ A minimalist static web page inspired by Linktree, developed as a student portfo
 - **Minimalist & Fast:** Zero heavy dependencies for lightning-fast loading speeds.
 - **Accessible (a11y):** Clear semantic structure and accessible touch targets.
 
+---
 
 ## Built With
 
