@@ -23,6 +23,8 @@ A minimalist static web page inspired by Linktree, developed as a student portfo
 
 Ensure you have a modern web browser installed (e.g., Google Chrome, Brave, Firefox).
 
+---
+
 ### Installation
 
 1. **Clone the repository:**
