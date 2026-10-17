@@ -209,30 +209,23 @@ button { font: inherit; }
 }
 .btn[hidden] { display: none; }
 
-/* Primary: stays light on hover. Only a soft periwinkle light follows the
-   cursor across it, the same gesture the cards use. */
+/* Primary: stays light. On hover it brightens a touch, gets a thin halo and
+   the icon tilts; pressing it sinks slightly. No colour flip, no glow. */
 .btn-primary {
-    position: relative;
-    isolation: isolate;
-    overflow: hidden;
     flex: 1 1 auto;
     background: var(--text);
     color: var(--bg);
+    transition: background-color 0.15s, box-shadow 0.2s, transform 0.12s;
 }
-.btn-primary:active { transform: translateY(1px); }
+.btn-primary i { transition: transform 0.2s; }
+.btn-primary:active { transform: translateY(1px) scale(0.985); }
 
 @media (hover: hover) and (pointer: fine) {
-    .btn-primary::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        z-index: -1;
-        pointer-events: none;
-        opacity: 0;
-        background: radial-gradient(130px circle at var(--mx, 50%) var(--my, 50%), rgba(var(--accent-rgb), 0.6), rgba(var(--accent-rgb), 0) 70%);
-        transition: opacity 0.25s;
+    .btn-primary:hover {
+        background: #fff;
+        box-shadow: 0 0 0 4px rgba(var(--accent-rgb), 0.16);
     }
-    .btn-primary:hover::before { opacity: 1; }
+    .btn-primary:hover i { transform: translateX(-1px) rotate(-8deg); }
 }
 
 .btn-secondary {
