@@ -3,139 +3,252 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kashka Octo | Official</title>
+    <title>Kashka Octora — Software Engineer</title>
+    <meta name="description" content="Kashka Octora, software engineer building web and desktop applications with Laravel, Next.js and Python. Projects, GitHub and contact links.">
+    <meta name="author" content="Kashka Octora">
+    <meta name="theme-color" content="#0a0d16">
+    <meta name="color-scheme" content="dark">
 
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Kashka Octora — Software Engineer">
+    <meta property="og:description" content="Web and desktop applications with Laravel, Next.js and Python. Projects, GitHub and contact links.">
+    <meta name="twitter:card" content="summary">
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%2311141f'/%3E%3Ctext x='16' y='22' font-size='16' font-weight='700' text-anchor='middle' fill='%23a3aeff' font-family='system-ui,sans-serif'%3EK%3C/text%3E%3C/svg%3E">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..700&family=Geist:wght@400..600&family=Geist+Mono:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/style.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Kashka Octora",
+        "jobTitle": "Software Engineer",
+        "knowsAbout": ["Laravel", "Next.js", "Python", "TypeScript"],
+        "sameAs": [
+            "https://github.com/Kazhtova",
+            "https://instagram.com/ymzkazz"
+        ]
+    }
+    </script>
 </head>
 
 <body>
-<!-- Main -->
-    <main class="main-container">
+    <div class="page">
+        <div class="layout">
 
-        <div class="profile-header">
-            <div class="avatar-container">
-                <img src="https://ui-avatars.com/api/?name=Kashka+Octo&background=0a0a0a&color=a855f7&size=256&bold=true" alt="Profile" class="profile-img">
-            </div>
-            <h1 class="name">Kashka Octora</h1>
-            <div class="role">Software Engineer</div>
-            <p class="bio">Build With Good Experience.</p>
-            <!-- Komentar -->
+            <!-- Profile -->
+            <header class="profile">
+                <!-- Pakai foto: ganti isi .avatar dengan <img src="assets/foto.jpg" alt="Kashka Octora"> -->
+                <div class="avatar" aria-hidden="true">KO</div>
+
+                <h1 class="name"><span>Kashka</span> <span>Octora</span></h1>
+                <p class="role">Software Engineer</p>
+
+                <p class="bio">Build with good experience.</p>
+                <p class="about">Web and desktop applications: inventory, library and finance systems.</p>
+
+                <ul class="stack" aria-label="Main technologies">
+                    <li class="tag">Laravel</li>
+                    <li class="tag">Next.js</li>
+                    <li class="tag">Python</li>
+                </ul>
+
+                <div class="actions">
+                    <a class="btn btn-primary" href="mailto:kakareceive@gmail.com">
+                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                        Send an email
+                    </a>
+                    <!-- Tombol ini muncul lewat JavaScript; tanpa JS tautan email di samping tetap berfungsi. -->
+                    <button class="btn btn-secondary" type="button" id="copy-email" data-email="kakareceive@gmail.com" hidden>
+                        <i class="fa-regular fa-copy icon-copy" aria-hidden="true"></i>
+                        <i class="fa-solid fa-check icon-done" aria-hidden="true"></i>
+                        <span class="btn-label">Copy email</span>
+                    </button>
+                </div>
+                <span class="sr-only" role="status" id="copy-status"></span>
+            </header>
+
+            <main class="content">
+
+                <!-- Projects -->
+                <section aria-labelledby="projects-title">
+                    <h2 class="section-title" id="projects-title">Projects</h2>
+                    <ul class="projects">
+                        <li>
+                            <a class="card spot" href="https://github.com/Kazhtova/Invenkoryz/" target="_blank" rel="noopener noreferrer">
+                                <div class="card-head">
+                                    <div>
+                                        <p class="card-title">Invenkoryz</p>
+                                        <p class="card-desc">Inventory and asset management system.</p>
+                                    </div>
+                                    <span class="go" aria-hidden="true"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                                </div>
+                                <div class="card-foot">
+                                    <ul class="stack">
+                                        <li class="tag">Next.js</li>
+                                        <li class="tag">TypeScript</li>
+                                    </ul>
+                                    <span class="repo"><i class="fa-brands fa-github" aria-hidden="true"></i>Kazhtova/Invenkoryz</span>
+                                </div>
+                                <span class="sr-only">(opens in a new tab)</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="card spot" href="https://github.com/Kazhtova/Laravel-KazFolyo" target="_blank" rel="noopener noreferrer">
+                                <div class="card-head">
+                                    <div>
+                                        <p class="card-title">KazFolyo</p>
+                                        <p class="card-desc">Web application built with Laravel.</p>
+                                    </div>
+                                    <span class="go" aria-hidden="true"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                                </div>
+                                <div class="card-foot">
+                                    <ul class="stack">
+                                        <li class="tag">Laravel</li>
+                                        <li class="tag">PHP</li>
+                                    </ul>
+                                    <span class="repo"><i class="fa-brands fa-github" aria-hidden="true"></i>Kazhtova/Laravel-KazFolyo</span>
+                                </div>
+                                <span class="sr-only">(opens in a new tab)</span>
+                            </a>
+                        </li>
+                        <!--
+                            Untuk menambah proyek (mis. UI/UX Design), salin salah satu <li> di atas
+                            dan ganti href, judul, deskripsi, tag, dan nama repo-nya.
+                        -->
+                    </ul>
+                </section>
+
+                <!-- Profiles -->
+                <section aria-labelledby="profiles-title">
+                    <h2 class="section-title" id="profiles-title">Find me online</h2>
+                    <ul class="links">
+                        <li>
+                            <a class="tile spot" href="https://github.com/Kazhtova" target="_blank" rel="noopener noreferrer">
+                                <span class="tile-top">
+                                    <span class="tile-icon" aria-hidden="true"><i class="fa-brands fa-github"></i></span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square tile-arrow" aria-hidden="true"></i>
+                                </span>
+                                <span>
+                                    <span class="tile-name">GitHub</span>
+                                    <span class="tile-handle">Kazhtova</span>
+                                </span>
+                                <span class="sr-only">(opens in a new tab)</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="tile spot" href="https://instagram.com/ymzkazz" target="_blank" rel="noopener noreferrer">
+                                <span class="tile-top">
+                                    <span class="tile-icon" aria-hidden="true"><i class="fa-brands fa-instagram"></i></span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square tile-arrow" aria-hidden="true"></i>
+                                </span>
+                                <span>
+                                    <span class="tile-name">Instagram</span>
+                                    <span class="tile-handle">@ymzkazz</span>
+                                </span>
+                                <span class="sr-only">(opens in a new tab)</span>
+                            </a>
+                        </li>
+                        <li>
+                            <!-- TODO: ganti dengan URL profil LinkedIn kamu, mis. https://www.linkedin.com/in/username -->
+                            <a class="tile spot" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                                <span class="tile-top">
+                                    <span class="tile-icon" aria-hidden="true"><i class="fa-brands fa-linkedin-in"></i></span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square tile-arrow" aria-hidden="true"></i>
+                                </span>
+                                <span>
+                                    <span class="tile-name">LinkedIn</span>
+                                    <span class="tile-handle">Professional profile</span>
+                                </span>
+                                <span class="sr-only">(opens in a new tab)</span>
+                            </a>
+                        </li>
+                        <li>
+                            <!-- TODO: ganti dengan URL profil TikTok kamu, mis. https://www.tiktok.com/@username -->
+                            <a class="tile spot" href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">
+                                <span class="tile-top">
+                                    <span class="tile-icon" aria-hidden="true"><i class="fa-brands fa-tiktok"></i></span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square tile-arrow" aria-hidden="true"></i>
+                                </span>
+                                <span>
+                                    <span class="tile-name">TikTok</span>
+                                    <span class="tile-handle">Short videos</span>
+                                </span>
+                                <span class="sr-only">(opens in a new tab)</span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+
+            </main>
         </div>
 
-        <div class="links-wrapper">
-            
-            <div class="link-group" id="group-0">
-                <div class="link-card" onclick="toggleDropdown('group-0')">
-                    <div class="link-icon-box">
-                        <i class="fa-solid fa-layer-group"></i>
-                    </div>
-                    <div class="link-content">
-                        <span class="link-title">Portfolio</span>
-                        <span class="link-subtitle">Selected works & case studies</span>
-                    </div>
-                    <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
-                </div>
-                
-                <div class="sublinks-container" id="sub-0">
-                    <a href="https://github.com/Kazhtova/Laravel-KazFolyo" class="sub-link" target="_blank">
-                        <i class="fa-solid fa-code"></i>
-                        <span>Web Applications</span>
-                    </a>
-                    <a href="#" class="sub-link" target="_blank">
-                        <i class="fa-solid fa-pen-nib"></i>
-                        <span>UI/UX Design</span>
-                    </a>
-                    <a href="https://github.com/Kazhtova/Invenkoryz/" class="sub-link" target="_blank">
-                        <i class="fa-solid fa-server"></i>
-                        <span>System Architecture</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="link-group" id="group-1">
-                <a href="https://github.com" class="link-card" target="_blank">
-                    <div class="link-icon-box">
-                        <i class="fa-brands fa-github"></i>
-                    </div>
-                    <div class="link-content">
-                        <span class="link-title">GitHub</span>
-                        <span class="link-subtitle">Open source contributions</span>
-                    </div>
-                    <i class="fa-solid fa-arrow-up-right-from-square dropdown-arrow" style="transform: none; opacity: 0.5;"></i>
-                </a>
-            </div>
-
-            <div class="link-group" id="group-2">
-                <a href="https://linkedin.com" class="link-card" target="_blank">
-                    <div class="link-icon-box">
-                        <i class="fa-brands fa-linkedin-in"></i>
-                    </div>
-
-                    <div class="link-content">
-                        <span class="link-title">LinkedIn</span>
-                        <span class="link-subtitle">Professional network</span>
-                    </div>
-                    <i class="fa-solid fa-arrow-up-right-from-square dropdown-arrow" style="transform: none; opacity: 0.5;"></i>
-                </a>
-            </div>
-
-            <div class="link-group" id="group-3">
-                <div class="link-card" onclick="toggleDropdown('group-3')">
-                    <div class="link-icon-box">
-                        <i class="fa-solid fa-share-nodes"></i>
-                    </div>
-
-                    <div class="link-content">
-                        <span class="link-title">Social Media</span>
-                        <span class="link-subtitle">Connect with me daily</span>
-                    </div>
-                    <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
-                </div>
-                
-                <div class="sublinks-container" id="sub-3">
-
-                    <a href="https://instagram.com/ymzkazz" class="sub-link" target="_blank">
-                        <i class="fa-brands fa-instagram"></i>
-                        <span>Instagram</span>
-                    </a>
-
-                    <a href="https://tiktok.com/" class="sub-link" target="_blank">
-                        <i class="fa-brands fa-tiktok"></i>
-                        <span>TikTok</span>
-                    </a>
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kakareceive@gmail.com" class="sub-link" target="_blank">
-                        <i class="fa-solid fa-envelope"></i>
-                        <span>Gmail</span>
-                    </a>
-                </div>
-            </div>
-
-        </div>
-
- 
         <footer class="footer">
-            &copy; Designed by Kashka <b>|</b> 2026 <br>
+            <p>&copy; 2026 Kashka Octora</p>
         </footer>
+    </div>
 
-    </main>
-
-
-    <!-- Javascript index-->
     <script>
-        function toggleDropdown(id) {
-            const group = document.getElementById(id);
-            const content = group.querySelector('.sublinks-container');
-            
-            group.classList.toggle('active');
+        (() => {
+            /* Copy email ---------------------------------------------------- */
+            const btn = document.getElementById('copy-email');
+            if (btn) {
+                btn.hidden = false;
 
-            if (group.classList.contains('active')) {
-                content.style.maxHeight = content.scrollHeight + "px";
-            } else {
-                content.style.maxHeight = "0px";
+                const label = btn.querySelector('.btn-label');
+                const status = document.getElementById('copy-status');
+                const idle = label.textContent;
+                let timer;
+
+                async function copyText(text) {
+                    try {
+                        await navigator.clipboard.writeText(text);
+                        return true;
+                    } catch (_) { /* fall through to legacy copy */ }
+
+                    const area = document.createElement('textarea');
+                    area.value = text;
+                    area.setAttribute('readonly', '');
+                    area.style.cssText = 'position:fixed;opacity:0;pointer-events:none';
+                    document.body.appendChild(area);
+                    area.select();
+                    let ok = false;
+                    try { ok = document.execCommand('copy'); } catch (_) { /* ignore */ }
+                    area.remove();
+                    return ok;
+                }
+
+                btn.addEventListener('click', async () => {
+                    const ok = await copyText(btn.dataset.email);
+                    label.textContent = ok ? 'Copied' : 'Copy failed';
+                    status.textContent = ok ? 'Email address copied' : 'Could not copy the email address';
+                    btn.dataset.state = ok ? 'done' : 'error';
+
+                    clearTimeout(timer);
+                    timer = setTimeout(() => {
+                        label.textContent = idle;
+                        status.textContent = '';
+                        btn.removeAttribute('data-state');
+                    }, 1800);
+                });
             }
-        }
+
+            /* Cursor light on cards and the email button (mouse and pen only) */
+            if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+                document.querySelectorAll('.spot, .btn-primary').forEach((el) => {
+                    el.addEventListener('pointermove', (e) => {
+                        const r = el.getBoundingClientRect();
+                        el.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+                        el.style.setProperty('--my', (e.clientY - r.top) + 'px');
+                    });
+                });
+            }
+        })();
     </script>
 </body>
 </html>
