@@ -85,24 +85,32 @@ button { font: inherit; }
 
 .layout {
     display: grid;
-    gap: 3rem;
-}
-
-@media (min-width: 60rem) {
-    .layout {
-        grid-template-columns: 20rem minmax(0, 1fr);
-        gap: clamp(3rem, 7vw, 6rem);
-        align-items: start;
-    }
-    .profile {
-        position: sticky;
-        top: clamp(2.5rem, 10vh, 6rem);
-    }
 }
 
 .content {
     display: grid;
     gap: 3rem;
+    margin-top: 3rem;
+}
+
+@media (min-width: 60rem) {
+    .layout {
+        grid-template-columns: 20rem minmax(0, 1fr);
+        grid-template-rows: 1fr auto;
+        column-gap: clamp(3rem, 7vw, 6rem);
+        align-items: start;
+    }
+    .profile {
+        grid-column: 1;
+        grid-row: 1;
+        position: sticky;
+        top: clamp(2.5rem, 10vh, 6rem);
+    }
+    .content {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+        margin-top: 0;
+    }
 }
 
 /* Profile ---------------------------------------------------------------- */
@@ -437,9 +445,23 @@ button { font: inherit; }
 
 /* Footer ----------------------------------------------------------------- */
 .footer {
-    margin-top: 4rem;
+    margin-top: 1rem;
     color: var(--faint);
     font-size: 0.8125rem;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    font-variant-numeric: tabular-nums;
+}
+
+/* Desktop: the footer sits in the profile column, flush with the bottom edge
+   of the last row on the right. */
+@media (min-width: 60rem) {
+    .footer {
+        grid-column: 1;
+        grid-row: 2;
+        align-self: end;
+        margin-top: 0;
+    }
 }
 
 /* Small screens ---------------------------------------------------------- */
