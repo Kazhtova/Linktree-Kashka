@@ -4,22 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kashka Octora — Software Engineer</title>
-    <meta name="description" content="Kashka Octora, software engineer building web and desktop applications with Laravel, Next.js and Golang. Projects, GitHub and contact links.">
+    <meta name="description" content="Kashka Octora, software engineer building web and desktop applications with Laravel, Next.js and Golang. Selected works, archive note and contact.">
     <meta name="author" content="Kashka Octora">
-    <meta name="theme-color" content="#0a0d16">
+    <meta name="theme-color" content="#090909">
     <meta name="color-scheme" content="dark">
 
     <meta property="og:type" content="profile">
     <meta property="og:title" content="Kashka Octora — Software Engineer">
-    <meta property="og:description" content="Web and applications with Laravel, Next.js and Golang. Projects, GitHub and contact links.">
+    <meta property="og:description" content="Web and applications with Laravel, Next.js and Golang. Selected works, archive note and contact.">
     <meta name="twitter:card" content="summary">
 
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%2311141f'/%3E%3Ctext x='16' y='22' font-size='16' font-weight='700' text-anchor='middle' fill='%23a3aeff' font-family='system-ui,sans-serif'%3EK%3C/text%3E%3C/svg%3E">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23090909'/%3E%3Ctext x='16' y='24' font-size='22' font-style='italic' text-anchor='middle' fill='%23ece9e2' font-family='Georgia,serif'%3EK%3C/text%3E%3Crect x='6' y='27' width='20' height='2' fill='%236E518E'/%3E%3C/svg%3E">
+
+    <!-- Runs before first paint: decides whether the intro plays (first visit per tab, or ?intro=1). -->
+    <script>
+        (function () {
+            var d = document.documentElement;
+            d.classList.add('js');
+            try {
+                var forced = /[?&]intro=1/.test(location.search);
+                var seen = sessionStorage.getItem('ko-intro');
+                var calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                if ((forced || !seen) && !calm) d.classList.add('intro-on');
+            } catch (e) { /* storage blocked: skip the intro */ }
+        })();
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..700&family=Geist:wght@400..600&family=Geist+Mono:wght@400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Inter+Tight:wght@300..600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/style.css">
 
     <script type="application/ld+json">
@@ -38,217 +51,304 @@
 </head>
 
 <body>
-    <div class="page">
-        <div class="layout">
+    <a class="skip" href="#main">Skip to content</a>
+    <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
 
-            <!-- Profile -->
-            <header class="profile">
-                <!-- Pakai foto: ganti isi .avatar dengan <img src="assets/foto.jpg" alt="Kashka Octora"> -->
-                <div class="avatar" aria-hidden="true">KO</div>
-
-                <h1 class="name"><span>Kashka</span> <span>Octora</span></h1>
-                <p class="role">Software Engineer</p>
-
-                <p class="bio">Build with good experience.</p>
-                <p class="about">Web and Applications: ERP and EAM systems.</p>
-
-                <ul class="stack" aria-label="Main technologies">
-                    <li class="tag">Laravel</li>
-                    <li class="tag">Next.js</li>
-                    <li class="tag">Golang</li>
-                </ul>
-
-                <div class="actions">
-                    <a class="btn btn-primary" href="mailto:kakareceive@gmail.com">
-                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-                        Send an email
-                    </a>
-                    <!-- Tombol ini muncul lewat JavaScript; tanpa JS tautan email di samping tetap berfungsi. -->
-                    <button class="btn btn-secondary" type="button" id="copy-email" data-email="kakareceive@gmail.com" hidden>
-                        <i class="fa-regular fa-copy icon-copy" aria-hidden="true"></i>
-                        <i class="fa-solid fa-check icon-done" aria-hidden="true"></i>
-                        <span class="btn-label">Copy email</span>
-                    </button>
-                </div>
-                <span class="sr-only" role="status" id="copy-status"></span>
-            </header>
-
-            <main class="content">
-
-                <!-- Projects -->
-                <section aria-labelledby="projects-title">
-                    <h2 class="section-title" id="projects-title">Projects</h2>
-                    <ul class="projects">
-                        <li>
-                            <a class="card spot" href="https://github.com/Kazhtova/Saypraz/" target="_blank" rel="noopener noreferrer">
-                                <div class="card-head">
-                                    <div>
-                                        <p class="card-title">SayPraz</p>
-                                        <p class="card-desc">Inventory Management and Borrowing System (EAM) Enterprise Asset Management built with Laravel & Next.js.</p>
-                                    </div>
-                                    <span class="go" aria-hidden="true"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-                                </div>
-                                <div class="card-foot">
-                                    <ul class="stack">
-                                        <li class="tag">Next.js</li>
-                                        <li class="tag">Laravel</li>
-                                    </ul>
-                                    <span class="repo"><i class="fa-brands fa-github" aria-hidden="true"></i>Kazhtova/SayPraz</span>
-                                </div>
-                                <span class="sr-only">(opens in a new tab)</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="card spot" href="https://github.com/Kazhtova/sistem-monitoring" target="_blank" rel="noopener noreferrer">
-                                <div class="card-head">
-                                    <div>
-                                        <p class="card-title">sistem-monitoring</p>
-                                        <p class="card-desc">Program ini adalah sistem monitoring untuk memantau dan mengelola penggunaan perangkat lunak agar operasional komputer lebih terstruktur dan efisien.</p>
-                                    </div>
-                                    <span class="go" aria-hidden="true"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-                                </div>
-                                <div class="card-foot">
-                                    <ul class="stack">
-                                        <li class="tag">Laravel</li>
-                                        <li class="tag">PHP</li>
-                                    </ul>
-                                    <span class="repo"><i class="fa-brands fa-github" aria-hidden="true"></i>Kazhtova/sistem-monitoring</span>
-                                </div>
-                                <span class="sr-only">(opens in a new tab)</span>
-                            </a>
-                        </li>
-                        <!--
-                            Untuk menambah proyek (mis. UI/UX Design), salin salah satu <li> di atas
-                            dan ganti href, judul, deskripsi, tag, dan nama repo-nya.
-                        -->
-                    </ul>
-                </section>
-
-                <!-- Profiles -->
-                <section aria-labelledby="profiles-title">
-                    <h2 class="section-title" id="profiles-title">Find me online</h2>
-                    <ul class="links">
-                        <li>
-                            <a class="tile spot" href="https://github.com/Kazhtova" target="_blank" rel="noopener noreferrer">
-                                <span class="tile-top">
-                                    <span class="tile-icon" aria-hidden="true"><i class="fa-brands fa-github"></i></span>
-                                    <i class="fa-solid fa-arrow-up-right-from-square tile-arrow" aria-hidden="true"></i>
-                                </span>
-                                <span>
-                                    <span class="tile-name">GitHub</span>
-                                    <span class="tile-handle">Kazhtova</span>
-                                </span>
-                                <span class="sr-only">(opens in a new tab)</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="tile spot" href="https://instagram.com/ymzkazz" target="_blank" rel="noopener noreferrer">
-                                <span class="tile-top">
-                                    <span class="tile-icon" aria-hidden="true"><i class="fa-brands fa-instagram"></i></span>
-                                    <i class="fa-solid fa-arrow-up-right-from-square tile-arrow" aria-hidden="true"></i>
-                                </span>
-                                <span>
-                                    <span class="tile-name">Instagram</span>
-                                    <span class="tile-handle">@ymzkazz</span>
-                                </span>
-                                <span class="sr-only">(opens in a new tab)</span>
-                            </a>
-                        </li>
-                        <li>
-                            <!-- TODO: ganti dengan URL profil LinkedIn kamu, mis. https://www.linkedin.com/in/username -->
-                            <a class="tile spot" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
-                                <span class="tile-top">
-                                    <span class="tile-icon" aria-hidden="true"><i class="fa-brands fa-linkedin-in"></i></span>
-                                    <i class="fa-solid fa-arrow-up-right-from-square tile-arrow" aria-hidden="true"></i>
-                                </span>
-                                <span>
-                                    <span class="tile-name">LinkedIn</span>
-                                    <span class="tile-handle">Professional profile</span>
-                                </span>
-                                <span class="sr-only">(opens in a new tab)</span>
-                            </a>
-                        </li>
-                        <li>
-                            <!-- TODO: ganti dengan URL profil TikTok kamu, mis. https://www.tiktok.com/@username -->
-                            <a class="tile spot" href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">
-                                <span class="tile-top">
-                                    <span class="tile-icon" aria-hidden="true"><i class="fa-brands fa-tiktok"></i></span>
-                                    <i class="fa-solid fa-arrow-up-right-from-square tile-arrow" aria-hidden="true"></i>
-                                </span>
-                                <span>
-                                    <span class="tile-name">TikTok</span>
-                                    <span class="tile-handle">Short videos</span>
-                                </span>
-                                <span class="sr-only">(opens in a new tab)</span>
-                            </a>
-                        </li>
-                    </ul>
-                </section>
-
-            </main>
-
-            <footer class="footer">
-                <p>&copy; 2026 Kashka Octora</p>
-            </footer>
+    <!-- Intro ------------------------------------------------------------ -->
+    <div id="intro" class="intro" aria-hidden="true">
+        <div class="intro-top mono"><span>KASHKA/ 001</span><span>ARCHIVE REV. 2026</span></div>
+        <div class="intro-mid">
+            <p class="intro-word" id="intro-word">Kashka</p>
+            <p class="intro-line mono" id="intro-line">OPENING RECORD</p>
         </div>
+        <div class="intro-bottom mono">
+            <span id="intro-count">000</span>
+            <span class="intro-skip">CLICK OR PRESS ANY KEY TO SKIP</span>
+        </div>
+        <div class="intro-bar"><span id="intro-fill"></span></div>
     </div>
 
-    <script>
-        (() => {
-            /* Copy email ---------------------------------------------------- */
-            const btn = document.getElementById('copy-email');
-            if (btn) {
-                btn.hidden = false;
+    <!-- Header ----------------------------------------------------------- -->
+    <header class="site-header" id="site-header">
+        <a class="brand mono" href="#cover" aria-label="Kashka Octora, back to top">KASHKA<span>/ 001</span></a>
 
-                const label = btn.querySelector('.btn-label');
-                const status = document.getElementById('copy-status');
-                const idle = label.textContent;
-                let timer;
+        <button class="menu-btn mono" type="button" id="menu-btn" aria-expanded="false" aria-controls="index">
+            <span class="menu-label">INDEX</span>
+        </button>
 
-                async function copyText(text) {
-                    try {
-                        await navigator.clipboard.writeText(text);
-                        return true;
-                    } catch (_) { /* fall through to legacy copy */ }
+        <nav class="index" id="index" aria-label="Index">
+            <ol>
+                <li><a href="#works"><span class="n">02</span>Works</a></li>
+                <li><a href="#manifest"><span class="n">03</span>Manifest</a></li>
+                <li><a href="#about"><span class="n">04</span>About</a></li>
+                <li><a href="#signal"><span class="n">05</span>Signal</a></li>
+            </ol>
+        </nav>
+    </header>
 
-                    const area = document.createElement('textarea');
-                    area.value = text;
-                    area.setAttribute('readonly', '');
-                    area.style.cssText = 'position:fixed;opacity:0;pointer-events:none';
-                    document.body.appendChild(area);
-                    area.select();
-                    let ok = false;
-                    try { ok = document.execCommand('copy'); } catch (_) { /* ignore */ }
-                    area.remove();
-                    return ok;
-                }
+    <main id="main">
 
-                btn.addEventListener('click', async () => {
-                    const ok = await copyText(btn.dataset.email);
-                    label.textContent = ok ? 'Copied' : 'Copy failed';
-                    status.textContent = ok ? 'Email address copied' : 'Could not copy the email address';
-                    btn.dataset.state = ok ? 'done' : 'error';
+        <!-- 00 / Cover -->
+        <section class="cover" id="cover" aria-labelledby="cover-title">
+            <div class="wrap">
+                <div class="cover-bar mono">
+                    <span>00 / THRESHOLD</span>
+                    <span class="status"><i aria-hidden="true"></i>STATUS / ONLINE</span>
+                </div>
 
-                    clearTimeout(timer);
-                    timer = setTimeout(() => {
-                        label.textContent = idle;
-                        status.textContent = '';
-                        btn.removeAttribute('data-state');
-                    }, 1800);
-                });
-            }
+                <div class="cover-body">
+                    <div class="cover-main">
+                        <h1 class="wordmark" id="cover-title">
+                            <span class="w1 reveal">Kashka</span>
+                            <span class="w2 reveal" style="--d:.12s">Octora</span>
+                        </h1>
+                        <p class="subtitle mono reveal" style="--d:.24s">SOFTWARE ENGINEER</p>
 
-            /* Cursor light on cards (mouse and pen only) -------------------- */
-            if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
-                document.querySelectorAll('.spot').forEach((el) => {
-                    el.addEventListener('pointermove', (e) => {
-                        const r = el.getBoundingClientRect();
-                        el.style.setProperty('--mx', (e.clientX - r.left) + 'px');
-                        el.style.setProperty('--my', (e.clientY - r.top) + 'px');
-                    });
-                });
-            }
-        })();
-    </script>
+                        <dl class="meta reveal" style="--d:.3s">
+                            <div><dt>CLASS</dt><dd>Web &amp; Applications</dd></div>
+                            <div><dt>OPERATOR</dt><dd>Kashka Octora</dd></div>
+                            <div><dt>ROLE</dt><dd>Software Engineer</dd></div>
+                            <div><dt>REVISION</dt><dd>2026</dd></div>
+                        </dl>
+                    </div>
+
+                    <figure class="fig reveal" style="--d:.38s">
+                        <!--
+                            Pakai foto: ganti <div class="plate">…</div> dengan
+                            <div class="plate"><img src="assets/foto.jpg" alt="Kashka Octora"></div>
+                            (otomatis dibuat hitam-putih lewat CSS).
+                        -->
+                        <div class="plate" aria-hidden="true">
+                            <span class="plate-k">K</span>
+                            <span class="plate-k plate-k--mirror">K</span>
+                            <i class="tick t1"></i><i class="tick t2"></i><i class="tick t3"></i><i class="tick t4"></i>
+                        </div>
+                        <figcaption class="mono">FIG. 01 — OPERATOR</figcaption>
+                    </figure>
+                </div>
+
+                <a class="cue mono" href="#statement">SCROLL TO DECRYPT <span aria-hidden="true">↓</span></a>
+            </div>
+        </section>
+
+        <!-- 01 / Statement -->
+        <section class="sec" id="statement" aria-labelledby="statement-title">
+            <div class="wrap">
+                <div class="sec-head mono">
+                    <h2 id="statement-title" class="label" data-decrypt>01 / STATEMENT</h2>
+                    <span>RECORD / 001</span>
+                </div>
+
+                <div class="statement">
+                    <p class="pull reveal">Build with <em>good</em> experience.</p>
+                    <div class="statement-side reveal" style="--d:.1s">
+                        <p>I build web and desktop applications: inventory, asset management and monitoring systems that people actually use every day. Mostly ERP and EAM work, with Laravel, Next.js and Golang.</p>
+                        <p class="mono tagline">BUILT TO BE USED / NOT TO BE ADMIRED</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 02 / Selected Works -->
+        <section class="sec" id="works" aria-labelledby="works-title">
+            <div class="wrap">
+                <div class="sec-head mono">
+                    <h2 id="works-title" class="label" data-decrypt>02 / SELECTED WORKS</h2>
+                    <span>RECORD / 001—003</span>
+                </div>
+
+                <ul class="records">
+                    <li class="reveal">
+                        <a class="rec" href="https://github.com/Kazhtova/Saypraz/" target="_blank" rel="noopener noreferrer">
+                            <span class="rec-id mono">REC.001</span>
+                            <span class="rec-main">
+                                <span class="rec-title">SayPraz</span>
+                                <span class="rec-desc">Inventory management and borrowing system (EAM, Enterprise Asset Management) built with Laravel &amp; Next.js.</span>
+                            </span>
+                            <span class="rec-meta mono">
+                                <span>NEXT.JS · LARAVEL</span>
+                                <span class="repo">Kazhtova/SayPraz</span>
+                            </span>
+                            <span class="rec-go" aria-hidden="true">↗</span>
+                            <span class="sr-only">(opens in a new tab)</span>
+                        </a>
+                    </li>
+                    <li class="reveal">
+                        <a class="rec" href="https://github.com/Kazhtova/System-Monitoring" target="_blank" rel="noopener noreferrer">
+                            <span class="rec-id mono">REC.002</span>
+                            <span class="rec-main">
+                                <span class="rec-title">System-Monitoring</span>
+                                <span class="rec-desc">This program is a monitoring system designed to track and manage software usage, ensuring that computer operations are more structured and efficient.</span>
+                            </span>
+                            <span class="rec-meta mono">
+                                <span>LARAVEL · PHP</span>
+                                <span class="repo">Kazhtova/System-Monitoring</span>
+                            </span>
+                            <span class="rec-go" aria-hidden="true">↗</span>
+                            <span class="sr-only">(opens in a new tab)</span>
+                        </a>
+                    </li>
+                    <!--
+                        Tambah proyek: salin salah satu <li> di atas, ubah nomor REC, href,
+                        judul, deskripsi, teknologi, dan nama repo. Ubah juga "RECORD / 001—003".
+                    -->
+                    <li class="reveal">
+                        <div class="rec rec--empty">
+                            <span class="rec-id mono">REC.003</span>
+                            <span class="rec-main">
+                                <span class="rec-title">Awaiting input</span>
+                                <span class="rec-desc">UI/UX design work will be filed here.</span>
+                            </span>
+                            <span class="rec-meta mono"><span>STATUS / PENDING</span></span>
+                            <span class="rec-go" aria-hidden="true">—</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 03 / Manifest -->
+        <section class="sec" id="manifest" aria-labelledby="manifest-title">
+            <div class="wrap">
+                <div class="sec-head mono">
+                    <h2 id="manifest-title" class="label" data-decrypt>03 / MANIFEST</h2>
+                    <span>RECORD / 002</span>
+                </div>
+
+                <div class="manifest">
+                    <article class="cell reveal">
+                        <p class="cell-n mono">01</p>
+                        <h3>Languages</h3>
+                        <ul class="chips mono">
+                            <li>PHP</li><li>Go</li><li>TypeScript</li><li>JavaScript</li><li>Python</li>
+                        </ul>
+                    </article>
+                    <article class="cell reveal" style="--d:.06s">
+                        <p class="cell-n mono">02</p>
+                        <h3>Frameworks</h3>
+                        <ul class="chips mono">
+                            <li>Laravel</li><li>Next.js</li><li>Gin</li>
+                        </ul>
+                    </article>
+                    <article class="cell reveal" style="--d:.12s">
+                        <p class="cell-n mono">03</p>
+                        <h3>Tools</h3>
+                        <ul class="chips mono">
+                            <li>Git</li><li>GitHub</li><li>PostgreSQL</li>
+                        </ul>
+                    </article>
+                    <article class="cell cell--empty reveal" style="--d:.18s">
+                        <p class="cell-n mono">04</p>
+                        <h3>Design</h3>
+                        <p class="pending mono">AWAITING INPUT</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 04 / Archive Note -->
+        <section class="sec" id="about" aria-labelledby="about-title">
+            <div class="wrap">
+                <div class="sec-head mono">
+                    <h2 id="about-title" class="label" data-decrypt>04 / ARCHIVE NOTE</h2>
+                    <span>RECORD / 003</span>
+                </div>
+
+                <div class="about">
+                    <dl class="profile reveal">
+                        <div><dt>ALIAS</dt><dd>Kazhtova</dd></div>
+                        <div><dt>ROLE</dt><dd>Software Engineer</dd></div>
+                        <div><dt>ARCHIVE</dt><dd>Web and Applications: ERP and EAM systems</dd></div>
+                        <div><dt>STATUS</dt><dd>Building</dd></div>
+                    </dl>
+                    <p class="about-text reveal" style="--d:.1s">
+                        I care about software that stays understandable after the launch: clear data models, honest interfaces and code the next person can pick up.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 05 / Signal -->
+        <section class="sec" id="signal" aria-labelledby="signal-title">
+            <div class="wrap">
+                <div class="sec-head mono">
+                    <h2 id="signal-title" class="label" data-decrypt>05 / SIGNAL</h2>
+                    <span>CHANNEL / OPEN</span>
+                </div>
+
+                <div class="signal">
+                    <div class="signal-main reveal">
+                        <p class="signal-lead">Have something to build?<br><em>Send a signal.</em></p>
+                        <div class="actions">
+                            <a class="btn btn--solid mono" href="mailto:kakareceive@gmail.com">SEND AN EMAIL <span aria-hidden="true">→</span></a>
+                            <!-- Tombol ini muncul lewat JavaScript; tanpa JS tautan email di samping tetap berfungsi. -->
+                            <button class="btn mono" type="button" id="copy-email" data-email="kakareceive@gmail.com" hidden>
+                                <span class="btn-label">COPY EMAIL</span>
+                            </button>
+                        </div>
+                        <span class="sr-only" role="status" id="copy-status"></span>
+                    </div>
+
+                    <ul class="channels reveal" style="--d:.1s">
+                        <li>
+                            <a href="https://github.com/Kazhtova" target="_blank" rel="noopener noreferrer">
+                                <span class="mono ch-n">A</span>
+                                <span class="ch-name">GitHub</span>
+                                <span class="ch-handle mono">Kazhtova</span>
+                                <span class="ch-go" aria-hidden="true">↗</span>
+                                <span class="sr-only">(opens in a new tab)</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com/ymzkazz" target="_blank" rel="noopener noreferrer">
+                                <span class="mono ch-n">B</span>
+                                <span class="ch-name">Instagram</span>
+                                <span class="ch-handle mono">@ymzkazz</span>
+                                <span class="ch-go" aria-hidden="true">↗</span>
+                                <span class="sr-only">(opens in a new tab)</span>
+                            </a>
+                        </li>
+                        <!-- TODO: aktifkan dengan mengganti <div class="ch-off"> menjadi <a href="URL-kamu" target="_blank" rel="noopener noreferrer"> -->
+                        <li>
+                            <div class="ch-off">
+                                <span class="mono ch-n">C</span>
+                                <span class="ch-name">LinkedIn</span>
+                                <span class="ch-handle mono">PENDING</span>
+                                <span class="ch-go" aria-hidden="true">—</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="ch-off">
+                                <span class="mono ch-n">D</span>
+                                <span class="ch-name">TikTok</span>
+                                <span class="ch-handle mono">PENDING</span>
+                                <span class="ch-go" aria-hidden="true">—</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 06 / Colophon -->
+    <footer class="colophon" id="colophon">
+        <div class="wrap">
+            <div class="sec-head mono">
+                <h2 class="label">06 / COLOPHON</h2>
+                <span>END OF RECORD</span>
+            </div>
+            <div class="colo-grid">
+                <p>Set in Bodoni Moda, Inter Tight and JetBrains Mono. Written in plain HTML, CSS and JavaScript, hosted on GitHub Pages. No analytics, no cookies.</p>
+                <p class="mono">&copy; 2026 KASHKA OCTORA</p>
+                <p class="mono colo-links">
+                    <a href="?intro=1">REPLAY INTRO</a>
+                    <a href="#cover">BACK TO TOP ↑</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/script.js"></script>
 </body>
 </html>
