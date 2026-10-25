@@ -4,6 +4,8 @@ Situs portofolio statis bergaya "arsip": latar hitam, tipografi serif besar, lab
 
 Dibuat hanya dengan **HTML, CSS, dan JavaScript murni**. Tanpa framework, tanpa proses build, tanpa dependensi.
 
+---
+
 ## Struktur
 
 ```
