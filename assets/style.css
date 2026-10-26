@@ -334,8 +334,10 @@ a.rec:hover .rec-go, a.rec:focus-visible .rec-go { transform: translate(4px, -4p
     width: min(54vw, 760px); height: auto; aspect-ratio: 1;
     opacity: .4; mix-blend-mode: screen;
     pointer-events: none; user-select: none;
-    -webkit-mask-image: linear-gradient(to right, transparent 24%, #000 66%);
-    mask-image: linear-gradient(to right, transparent 24%, #000 66%);
+    -webkit-mask-image: linear-gradient(to right, transparent 24%, #000 66%), linear-gradient(to bottom, #000 48%, transparent 76%);
+    -webkit-mask-composite: source-in;
+    mask-image: linear-gradient(to right, transparent 24%, #000 66%), linear-gradient(to bottom, #000 48%, transparent 76%);
+    mask-composite: intersect;
 }
 
 .colo-mark {
@@ -375,12 +377,17 @@ a.rec:hover .rec-go, a.rec:focus-visible .rec-go { transform: translate(4px, -4p
     border-top: 1px solid var(--line-2); color: var(--soft); font-size: .66rem;
 }
 .colo-bar-mid { text-align: center; }
+/* "Back to top": bold underlined label with a thin arrow. It sits over the moon, so a soft dark halo keeps it readable. */
 .colo-bar a {
-    justify-self: end; color: var(--ink);
-    border-bottom: 1px solid var(--line-2); padding-bottom: .2rem;
-    transition: color .25s, border-color .25s;
+    justify-self: end; display: inline-flex; align-items: flex-start; gap: .55rem;
+    color: var(--ink); font-size: .68rem; letter-spacing: .127em; /* same size, spacing and weight as the Replay intro / Source links */
+    text-shadow: 0 0 6px var(--bg), 0 0 14px var(--bg), 0 0 22px var(--bg);
+    transition: color .25s;
 }
-.colo-bar a:hover { color: var(--accent-text); border-color: var(--accent); }
+.btt-label { padding-bottom: .2rem; border-bottom: 1px solid currentColor; transition: border-color .25s; }
+.btt-arrow { width: 12px; height: 15px; margin-top: -.15rem; flex: none; transition: transform .3s var(--ease); }
+.colo-bar a:hover, .colo-bar a:focus-visible { color: var(--accent-text); }
+.colo-bar a:hover .btt-arrow, .colo-bar a:focus-visible .btt-arrow { transform: translateY(-4px); }
 
 /* Reveal on scroll (only once JS confirmed it is running) ------------------ */
 .reveal-ready .reveal {
