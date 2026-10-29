@@ -1,7 +1,5 @@
 # Kashka Octora — Portfolio
 
----
-
 Situs portofolio statis bergaya "arsip": latar hitam, tipografi serif besar, label monospace bernomor, intro yang bisa diputar ulang, dan efek *decrypt* saat scroll.
 
 Dibuat hanya dengan **HTML, CSS, dan JavaScript murni**. Tanpa framework, tanpa proses build, tanpa dependensi.
