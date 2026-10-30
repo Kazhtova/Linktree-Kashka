@@ -4,7 +4,7 @@ Situs portofolio statis bergaya "arsip": latar hitam, tipografi serif besar, lab
 
 Dibuat hanya dengan **HTML, CSS, dan JavaScript murni**. Tanpa framework, tanpa proses build, tanpa dependensi.
 
-**Live:** https://kazhtova.github.io/portfolio/
+**Live:** https://kazhtova.github.io/
 
 ---
 
@@ -24,12 +24,12 @@ Buka `index.html` di browser, atau jalankan lewat ekstensi Live Server di VS Cod
 
 ## Deploy ke GitHub Pages
 
+Nama repo harus **`kazhtova.github.io`** agar situs tampil langsung di `https://kazhtova.github.io/`.
+
 1. Push semua file ke branch `main`.
 2. Buka **Settings → Pages**.
 3. Pada **Build and deployment**, pilih **Source: Deploy from a branch**, branch `main`, folder `/ (root)`, lalu **Save**.
-4. Situs aktif di `https://kazhtova.github.io/portfolio/` dalam 1–2 menit. Setiap `git push` berikutnya otomatis memperbarui situs.
-
-> Tip: jika repo diberi nama `kazhtova.github.io`, situs tampil di `https://kazhtova.github.io/` tanpa nama repo di belakangnya.
+4. Situs aktif dalam 1–2 menit. Setiap `git push` berikutnya otomatis memperbarui situs.
 
 ## Mengubah isi
 
